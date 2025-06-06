@@ -29,6 +29,10 @@ app.use(cookieParser());
 
 // LLAMAR AL router
 app.use("/", require("./routes/router"));
+app.use("/api/robots", require("./routes/api/robotRoutes"));
+app.use("/api/materiales", require("./routes/api/materialRoutes"));
+app.use("/api/cronograma", require("./routes/api/scheduleRoutes"));
+app.use("/api/resultados", require("./routes/api/resultRoutes"));
 
 /* app.get('/',(req, res) =>{
     res.render('index')
